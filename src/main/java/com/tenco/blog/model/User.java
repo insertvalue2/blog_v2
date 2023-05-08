@@ -12,6 +12,9 @@ import javax.persistence.Id;
 import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.CreationTimestamp;
 
+import lombok.Data;
+
+@Data // Lombok 사용 추가
 @Entity
 public class User {
 	
