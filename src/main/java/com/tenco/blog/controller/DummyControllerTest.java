@@ -6,6 +6,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort.Direction;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -72,7 +73,7 @@ public class DummyControllerTest {
 
 	// http://localhost:8080/dummy/join
 	@PostMapping("/dummy/join")
-	public String join(@RequestBody User user) {
+	public String join(@Validated @RequestBody User user) {
 
 		// 인증 검사
 		// 유효성 검사

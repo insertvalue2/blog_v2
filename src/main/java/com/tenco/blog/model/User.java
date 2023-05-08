@@ -8,11 +8,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotBlank;
 
 import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.CreationTimestamp;
 
 import lombok.Data;
+import lombok.NonNull;
 
 @Data // Lombok 사용 추가
 @Entity
@@ -21,8 +23,11 @@ public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
+	
+	@NotBlank // 코드 추가
 	@Column(nullable = false, length = 30)
 	private String username;
+	
 	@Column(nullable = false, length = 30)
 	private String password;
 	@Column(nullable = false, length = 50)
