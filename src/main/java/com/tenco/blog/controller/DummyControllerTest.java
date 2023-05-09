@@ -115,5 +115,6 @@ public class DummyControllerTest {
 		// user 오브젝트가 json type 로 보이게 된다.
 		return user;
 	}
+	
 
 }
